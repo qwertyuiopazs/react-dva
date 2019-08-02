@@ -1,18 +1,16 @@
-
+import request from './../utils/request'
 let index = {
     namespace: 'home',
     state: {num: 0},
     effects: {
-        *changNum(action, { put, call}) {
-            yield put({
-                type: "addNum",
-                payload: action.payload
-            })
+        *changeNum({payload},{select,put,call }) {
+            let res = yield call(request('/teacher/search'))
+            console.log(res)
+            yield put({type: "addNum",payload})
         }
     },
-    reducer: {
+    reducers: {
         addNum(state, {payload}) {
-
             return {
                 num: state.num + payload.num
             }

@@ -20,11 +20,9 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => ({
     changeNum() {
-        console.log(45454)
-
         dispatch({
-            type: 'home/addNum',
-            playload: {num: 888}
+            type: 'home/changeNum',
+            payload: {num: 888}
         })
     }
 })

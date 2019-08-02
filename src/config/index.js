@@ -1,4 +1,4 @@
 export default {
-    serverHost: 'http://localhost',
-    port: 3333
+    serverHost: 'https://www.easy-mock.com/mock/5d42dccdef4d4d3b7f3c219c/api',
+    port: ''
 }
